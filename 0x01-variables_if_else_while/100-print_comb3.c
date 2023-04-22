@@ -14,15 +14,16 @@ int main(void)
 		j = 48;
 		while (j <= 57)
 		{
-			if(i < j)
+			if (i < j)
 			{
 				putchar(i);
 				putchar(j);
-				if (i != 57 && j != 57)
+				if (i == 57 && j == 57)
 				{
-					putchar(',');
-					putchar(' ');
+					break;
 				}
+				putchar(',');
+				putchar(' ');
 			}
 			j++;			
 		}
