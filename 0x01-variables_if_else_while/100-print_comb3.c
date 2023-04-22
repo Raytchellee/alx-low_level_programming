@@ -18,8 +18,11 @@ int main(void)
 			{
 				putchar(i);
 				putchar(j);
-				putchar(',');
-				putchar(' ');
+				if (i != 57 && j != 57)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 			j++;			
 		}
