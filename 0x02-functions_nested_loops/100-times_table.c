@@ -38,7 +38,7 @@ while (i <= n)
 		}
 		_putchar((sum % 10) + '0');
 		j++;
-		if (j == n)
+		if (j > n)
 		{
 			_putchar('\n');
 			continue;
