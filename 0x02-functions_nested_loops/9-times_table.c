@@ -23,7 +23,7 @@ while (i < 10)
 		{
 			_putchar((sum / 10) + '0');
 		}
-		else if ( j != 0)
+		else if (j != 0)
 		{
 			_putchar(' ');
 		}
