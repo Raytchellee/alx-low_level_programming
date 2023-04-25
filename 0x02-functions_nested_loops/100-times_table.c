@@ -25,7 +25,7 @@ while (i <= n)
 		sum = i *j;
 		if (sum >= 100)
 		{
-			_printchar((sum / 100) + '0');
+			_putchar((sum / 100) + '0');
 			sum %= 100;
 			_putchar((sum / 10) + '0');
 		}
