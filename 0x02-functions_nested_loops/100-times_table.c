@@ -10,12 +10,10 @@ void print_times_table(int n)
 int i, j, sum;
 
 i = j = 0;
+if (n <= 15)
+{
 while (i <= n)
 {
-	if (n > 15)
-	{
-		break;
-	}
 	j = 0;
 	while (j <= n)
 	{
@@ -47,5 +45,6 @@ while (i <= n)
 		_putchar(' ');
 	}
 	i++;
+}
 }
 }
