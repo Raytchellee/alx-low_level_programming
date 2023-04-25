@@ -17,6 +17,7 @@ while (i < 10)
 	while (j < 10)
 	{
 		int sum;
+
 		sum = i * j;
 		if (sum >= 10)
 		{
