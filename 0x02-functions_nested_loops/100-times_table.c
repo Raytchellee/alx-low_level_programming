@@ -23,8 +23,15 @@ while (i <= n)
 		int sum;
 
 		sum = i *j;
-		if (sum >= 10)
+		if (sum >= 100)
 		{
+			_printchar((sum / 100) + '0');
+			sum %= 100;
+			_putchar((sum / 10) + '0');
+		}
+		else if (sum >= 10)
+		{
+			_putchar(' ');
 			_putchar((sum / 10) + '0');
 		}
 		else if (j != 0)
