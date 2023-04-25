@@ -18,10 +18,14 @@ while (i < 10)
 	{
 		int sum;
 
-		sum = i * j;
+		sum = i *j;
 		if (sum >= 10)
 		{
 			_putchar((sum / 10) + '0');
+		}
+		else
+		{
+			_putchar(' ');
 		}
 		_putchar((sum % 10) + '0');
 		if (j == 9)
