@@ -28,6 +28,7 @@ while (i <= n)
 		if (j == n)
 		{
 			_putchar('\n');
+			j++;
 			continue;
 		}
 		_putchar(' ');
