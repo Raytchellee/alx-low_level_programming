@@ -23,12 +23,13 @@ while (i < 10)
 			_putchar((sum / 10) + '0');
 		}
 		_putchar((sum % 10) + '0');
-		_putchar(',');
 		if (j == 9)
 		{
 			_putchar('\n');
+			j++;
 			continue;
 		}
+		_putchar(',');
 		_putchar(' ');
 		j++;
 	}
