@@ -2,10 +2,10 @@
 
 /**
  *main - prints _putchar to the output
- *return - return 0 on success
+ *Return: return 0 on success
  */
 
-int main (void)
+int main(void)
 {
 	char str[] = "_putchar";
 	int i = 0;
