@@ -18,7 +18,7 @@ while (i < 51)
 	j = 48;
 	while (j < 58)
 	{
-		if (i == 50 && j >= 51)
+		if (i == 50 && j > 51)
 		{
 			break;
 		}
