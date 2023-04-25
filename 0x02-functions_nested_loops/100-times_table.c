@@ -7,10 +7,9 @@
  */
 void print_times_table(int n)
 {
-int i, j;
+int i, j, sum;
 
-i = 0;
-j = 0;
+i = j = 0;
 while (i <= n)
 {
 	if (n > 15)
@@ -20,8 +19,6 @@ while (i <= n)
 	j = 0;
 	while (j <= n)
 	{
-		int sum;
-
 		sum = i *j;
 		if (sum >= 100)
 		{
@@ -40,15 +37,14 @@ while (i <= n)
 			_putchar(' ');
 		}
 		_putchar((sum % 10) + '0');
+		j++;
 		if (j == n)
 		{
 			_putchar('\n');
-			j++;
 			continue;
 		}
 		_putchar(',');
 		_putchar(' ');
-		j++;
 	}
 	i++;
 }
