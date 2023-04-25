@@ -2,10 +2,9 @@
 
 /**
  *main - prints the alphabets to the output
- *Return: return 0 on success
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	char alph = 'a';
 
@@ -15,5 +14,4 @@ int main(void)
 		alph++;
 	}
 	_putchar('\n');
-	return (0);
 }
