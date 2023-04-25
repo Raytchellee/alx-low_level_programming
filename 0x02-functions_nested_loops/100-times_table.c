@@ -13,6 +13,10 @@ i = 0;
 j = 0;
 while (i <= n)
 {
+	if (n > 15)
+	{
+		break;
+	}
 	j = 0;
 	while (j <= n)
 	{
@@ -25,6 +29,7 @@ while (i <= n)
 		}
 		else if (j != 0)
 		{
+			_putchar(' ');
 			_putchar(' ');
 		}
 		_putchar((sum % 10) + '0');
