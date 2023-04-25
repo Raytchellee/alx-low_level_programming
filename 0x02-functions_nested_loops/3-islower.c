@@ -2,7 +2,7 @@
 
 /**
  *_islower - check if an alphabet is lowercase the output
- *@c -iput value to be checked
+ *@c: input value to be checked
  *Return: return 1 on success
  */
 
