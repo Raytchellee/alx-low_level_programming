@@ -6,4 +6,4 @@
  */
 
 
-_putchar(char);
+int _putchar(char);
