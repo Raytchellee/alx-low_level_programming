@@ -16,8 +16,12 @@ l = 48;
 while (i < 51)
 {
 	j = 48;
-	while (j < 52)
+	while (j < 58)
 	{
+		if (i == 50 && j >= 51)
+		{
+			break;
+		}
 		k = 48;
 		while (k < 54)
 		{
