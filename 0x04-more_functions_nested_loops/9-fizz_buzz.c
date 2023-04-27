@@ -9,6 +9,7 @@ void main(void)
 {
 	char fizz[] = "Fizz";
 	char buzz[] = "Buzz";
+	int i;
 
 	printf("%d ", 1);
 	for (i = 2; i <= 100; i++)
