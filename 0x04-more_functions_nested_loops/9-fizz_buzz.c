@@ -3,15 +3,17 @@
 
 /**
  *main - prints square lines
+ *Return: Returns 0
  */
 
-void main(void)
+int main(void)
 {
-	char fizz[] = "Fizz";
-	char buzz[] = "Buzz";
+	char fizz[4] = "Fizz";
+	char buzz[4] = "Buzz";
 	int i;
 
-	printf("%d ", 1);
+	i = 1;
+	printf("%d ", i);
 	for (i = 2; i <= 100; i++)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
@@ -31,4 +33,6 @@ void main(void)
 			printf(" %d", i);
 		}
 	}
+	printf("\n");
+	return (0);
 }
