@@ -8,25 +8,23 @@
 
 int main(void)
 {
-	char fizz[4] = "Fizz";
-	char buzz[4] = "Buzz";
 	int i;
 
 	i = 1;
-	printf("%d ", i);
+	printf("%d", i);
 	for (i = 2; i <= 100; i++)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
 		{
-			printf(" %s%s", fizz, buzz);
+			printf(" FizzBuzz");
 		}
 		else if (i % 3 == 0)
 		{
-			printf(" %s", fizz);
+			printf(" Fizz");
 		}
 		else if (i % 5 == 0)
 		{
-			printf(" %s", buzz);
+			printf(" Buzz");
 		}
 		else
 		{
