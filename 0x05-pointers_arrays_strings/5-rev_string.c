@@ -9,7 +9,7 @@
 void rev_string(char *s)
 {
 	int left, length;
-	char hold;
+	char hold, *str;
 
 	left = 0;
 
@@ -18,12 +18,13 @@ void rev_string(char *s)
 		length++;
 	}
 	length--;
+	str = s;
 
 	while (left < length)
 	{
-		hold = s[length];
-		s[length] = s[left];
-		s[left] = hold;
+		hold = *(str + length);
+		*(str + length) = *(s + left);
+		*(s + left) = hold;
 		left++;
 		length--;
 	}
