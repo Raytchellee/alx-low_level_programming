@@ -11,11 +11,11 @@ char *cap_string(char *s)
 	int idx = 0, separator_idx;
 	int seperators[] = {9, 10, 32, 33, 34, 40, 41, 44, 46, 59, 63, 123, 125};
 
-	if (*(s + idx) > 96 && *(s + idx)< 123)
+	if (*(s + idx) > 96 && *(s + idx) < 123)
 	{
-		*(s + idx) = *(s + idx)- 32;
+		*(s + idx) = *(s + idx) - 32;
 		idx++;
-	}	
+	}
 
 	while (*(s + idx) != '\0')
 	{
