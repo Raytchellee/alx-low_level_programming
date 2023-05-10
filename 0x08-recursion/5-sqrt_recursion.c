@@ -19,7 +19,7 @@ int find_squareroot(int n, int idx)
 	}
 	else
 	{
-		return (0 + find_squareroot(x, idx + 1));
+		return (0 + find_squareroot(n, idx + 1));
 	}
 }
 
