@@ -26,7 +26,7 @@ int checkPalindrome(char *s, int idx, int idy)
     }
     else
     {
-        (return 0 + checkPalindrome(s, idx + 1, idy - 1));
+        return (0 + checkPalindrome(s, idx + 1, idy - 1));
     }
 }
 
