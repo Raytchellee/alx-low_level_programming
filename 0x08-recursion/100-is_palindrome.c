@@ -11,10 +11,10 @@
 int checkPalindrome(char *s, int idx, int idy)
 {
     if (s[idx] == ' '){
-        return 0 + checkPalindrome(s, idx + 1, idy);
+        return (0 + checkPalindrome(s, idx + 1, idy));
     }
     if (s[idy] == ' '){
-        return 0 + checkPalindrome(s, idx, idy - 1);
+        return (0 + checkPalindrome(s, idx, idy - 1));
     }
     if (idx > idy)
     {
@@ -24,9 +24,9 @@ int checkPalindrome(char *s, int idx, int idy)
     {
         return (0);
     }
-    else if (s[idx] == s[idy])
+    else
     {
-        return 0 + checkPalindrome(s, idx + 1, idy - 1);
+        (return 0 + checkPalindrome(s, idx + 1, idy - 1));
     }
 }
 
