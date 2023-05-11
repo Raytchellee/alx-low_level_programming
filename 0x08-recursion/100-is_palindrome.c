@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * is_palindrome - check for palindrome string
+ * checkPalindrome - check for palindrome string
  * @s: input string
  * @idx: left index
  * @idy: right index
