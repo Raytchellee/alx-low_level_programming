@@ -5,29 +5,21 @@
  * @s: input string
  * @idx: left index
  * @idy: right index
- * Return: 0 if false 1 if true
+ * Return: Always 0.
  */
 
 int checkPalindrome(char *s, int idx, int idy)
 {
-    if (s[idx] == ' '){
-        return (0 + checkPalindrome(s, idx + 1, idy));
-    }
-    if (s[idy] == ' '){
-        return (0 + checkPalindrome(s, idx, idy - 1));
-    }
-    if (idx > idy)
-    {
-        return (1);
-    }
-    else if (s[idx] != s[idy])
-    {
-        return (0);
-    }
-    else
-    {
-        return (0 + checkPalindrome(s, idx + 1, idy - 1));
-    }
+	if (s[idx] == ' ')
+		return (0 + checkPalindrome(s, idx + 1, idy));
+	if (s[idy] == ' ')
+		return (0 + checkPalindrome(s, idx, idy - 1));
+	if (idx > idy)
+		return (1);
+	else if (s[idx] != s[idy])
+		return (0);
+	else
+		return (0 + checkPalindrome(s, idx + 1, idy - 1));
 }
 
 /**
@@ -37,15 +29,12 @@ int checkPalindrome(char *s, int idx, int idy)
  * Return: length.
  */
 
-int getLength(char *s, int idy){
-    if (s[idy] != '\0')
-    {
-       return getLength(s, idy + 1);
-    }
-    else
-    {
-        return (idy);
-    }
+int getLength(char *s, int idy)
+{
+	if (s[idy] != '\0')
+		return (getLength(s, idy + 1));
+	else
+		return (idy);
 }
 
 
@@ -57,9 +46,8 @@ int getLength(char *s, int idy){
 
 int is_palindrome(char *s)
 {
-    int idx = 0, idy = 0;
+	int idx = 0, idy = 0;
 
-    idy = getLength(s, 0);
-
-    return 0 + checkPalindrome(s, idx, idy - 1);
+	idy = getLength(s, 0);
+	return (0 + checkPalindrome(s, idx, idy - 1));
 }
