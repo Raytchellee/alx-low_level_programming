@@ -40,7 +40,7 @@ int checkPalindrome(char *s, int idx, int idy)
 int getLength(char *s, int idy){
     if (s[idy] != '\0')
     {
-       getLength(s, idy + 1);
+       return getLength(s, idy + 1);
     }
     else
     {
