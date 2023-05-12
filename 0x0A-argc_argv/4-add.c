@@ -1,3 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * main -  return a product.
+ * @argc: first argument.
+ * @argv: second.
+ * Return: 0 - success.
+ */
 int main(int argc, char *argv[])
 {
 	int idx, sum;
@@ -5,11 +13,9 @@ int main(int argc, char *argv[])
 	{
 		if (argc[idx] % 2 == 0)
 		{
-			sum += argc[idx]
+			sum += argc[idx];
 		}
 	}
-
-	sum = atoi(argv[1]) * atoi(argv[2]);
 
 	printf("%d\n", sum);
 	return (0);
