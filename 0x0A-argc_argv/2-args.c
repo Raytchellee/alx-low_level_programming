@@ -6,7 +6,7 @@
  * @argv: input string
  * Return: 0
  */
- 
+
 int main(int argc, char *argv[])
 {
 	for (int idx = 0; idx < argc; idx++)
