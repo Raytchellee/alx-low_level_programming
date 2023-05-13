@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * main -  return true or false.
  * @argc: first argument.
@@ -18,8 +19,12 @@ int main(int argc, char *argv[])
 		{
 			sum += atoi(argv[idx]);
 		}
-	 }
-
+		if ((atoi(argv[idx]) == 0))
+		{
+			printf("Error\n");
+			return (1);
+		}
+	}
 	printf("%d\n", sum);
 	return (0);
 }
