@@ -12,31 +12,31 @@ int main(int argc, char *argv[])
 
 	amount = atoi(argv[1]);
 
-		while (amount >= 25)
-		{
-				count++;
-				amount -= 25;
-		}
-		while (amount >= 10)
-		{
-				count++;
-				amount -= 10;
-		}
-		while (amount >= 5)
-		{
-				count++;
-				amount -= 5;
-		}
-		while (amount >= 2)
-		{
-				count++;
-				amount -= 2;
-		}
-		while (amount >= 1)
-		{
-				count++;
-				amount -= 1;
-		}
-		printf("%d\n", count);
-		return (0);
+	while (amount >= 25)
+	{
+		count++;
+		amount -= 25;
+	}
+	while (amount >= 10)
+	{
+		count++;
+		amount -= 10;
+	}
+	while (amount >= 5)
+	{
+		count++;
+		amount -= 5;
+	}
+	while (amount >= 2)
+	{
+		count++;
+		amount -= 2;
+	}
+	while (amount >= 1)
+	{
+		count++;
+		amount -= 1;
+	}
+	printf("%d\n", count);
+	return (0);
 }
