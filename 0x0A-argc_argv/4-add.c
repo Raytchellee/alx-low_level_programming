@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		{
 			sum += atoi(argv[idx]);
 		}
-		else if ((atoi(argv[idx]) == 0))
+		else if ((atoi(argv[idx]) <= 0))
 		{
 			printf("Error\n");
 			return (1);
