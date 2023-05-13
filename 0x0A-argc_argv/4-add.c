@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main -  return a product.
+ * main -  return true or false.
  * @argc: first argument.
  * @argv: second.
  * Return: 0 - success.
@@ -9,13 +9,16 @@
 int main(int argc, char *argv[])
 {
 	int idx, sum;
-	for (idx = 0; idx < argc; idx--)
+
+	sum = 0;
+
+	for (idx = 1; idx < argc; idx++)
 	{
-		if (argc[idx] % 2 == 0)
+		if (atoi(argv[idx]) > 0)
 		{
-			sum += argc[idx];
+			sum += atoi(argv[idx]);
 		}
-	}
+	 }
 
 	printf("%d\n", sum);
 	return (0);
