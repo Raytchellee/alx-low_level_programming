@@ -10,6 +10,11 @@ int main(int argc, char *argv[])
 {
 	int count = 0, amount;
 
+	if (argc - 1 != 1)
+	{
+		printf("Error\n");
+		return (0);
+	}
 	amount = atoi(argv[1]);
 
 	while (amount >= 25)
