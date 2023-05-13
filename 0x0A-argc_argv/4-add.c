@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 #include <stdlib.h>
 
 /**
@@ -9,23 +10,21 @@
  */
 int main(int argc, char *argv[])
 {
-	int idx, sum;
+	int idx, sum, idy;
 
 	sum = 0;
 
 	for (idx = 1; idx < argc; idx++)
 	{
-	if (argv[idx] < '0' || argv[idx] > '9')
-	{
-		printf("Error\n");
-		return (1);
-	}
-	if (atoi(argv[idx]) <= 0)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	sum += atoi(argv[idx]);
+		for (idy = 0; argv[idx][idy] != '\0'; idy++)
+		{
+			if (!isdigit(argv[idx][idy]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		sum += atoi(argv[idx]);
 	}
 
 	printf("%d\n", sum);
