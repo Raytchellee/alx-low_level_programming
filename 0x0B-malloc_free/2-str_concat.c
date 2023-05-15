@@ -13,20 +13,24 @@ char *str_concat(char *s1, char *s2)
 	unsigned int idx = 0, idy = 0, idz;
 	char *s;
 
-	if (s1 == 0 && s2 == 0)
-		return (0);
-	while (*(s1 + idx) != '\0')
+	if (s1 != NULL)
 	{
-		idx++;
+		while (*(s1 + idx) != '\0')
+		{
+			idx++;
+		}
 	}
-	while (*(s2 + idy) != '\0')
+	if (s2 != NULL)
 	{
-		idy++;
+		while (*(s2 + idy) != '\0')
+		{
+			idy++;
+		}
 	}
 	s = malloc((idx + idy + 1) * sizeof(char));
+	idz = idx + idy;
 	if (s == 0)
 		return (0);
-	idz = idx + idy;
 	s[idz] = '\0';
 	idz--;
 
