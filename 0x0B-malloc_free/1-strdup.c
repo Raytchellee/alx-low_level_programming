@@ -12,6 +12,8 @@ char *_strdup(char *str)
 	unsigned int idx = 0;
 	char *s;
 
+	if (str == 0)
+		return (0);
 	while (*(str + idx) != '\0')
 	{
 		idx++;
