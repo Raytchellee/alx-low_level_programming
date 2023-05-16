@@ -10,7 +10,7 @@
 
 char *argstostr(int ac, char **av)
 {
-	unsigned int idx, idy, idz = 0, len = 0;
+	int idx, idy, idz = 0, len = 0;
 	char *s;
 
 	if (av == NULL || ac <= 0)
@@ -18,12 +18,13 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (idx = 0; idx < (unsigned int)ac; idx++)
+	for (idx = 0; idx < ac; idx++)
 	{
 		for (idy = 0; av[idx][idy] != '\0'; idy++)
 		{
 			len++;
 		}
+		len++;
 	}
 	s = (char *)malloc((len + 1) * sizeof(char));
 	if (s == NULL)
@@ -31,7 +32,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (idx = 0; idx < (unsigned int)ac; idx++)
+	for (idx = 0; idx < ac; idx++)
 	{
 		for (idy = 0; av[idx][idy] != '\0'; idy++)
 		{
