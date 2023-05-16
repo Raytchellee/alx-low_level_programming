@@ -18,7 +18,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (idx = 0; idx < ac; idx++)
+	for (idx = 0; idx < (unsigned int)ac; idx++)
 	{
 		for (idy = 0; av[idx][idy] != '\0'; idy++)
 		{
@@ -31,7 +31,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (idx = 0; idx < ac; idx++)
+	for (idx = 0; idx < (unsigned int)ac; idx++)
 	{
 		for (idy = 0; av[idx][idy] != '\0'; idy++)
 		{
@@ -41,6 +41,6 @@ char *argstostr(int ac, char **av)
 		s[idz] = '\n';
 		idz++;
 	}
-
+	s[idz] = '\0';
 	return (s);
 }
