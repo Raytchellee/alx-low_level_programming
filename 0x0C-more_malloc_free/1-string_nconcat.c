@@ -14,6 +14,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int idx = 0, idy = 0, len = 0, l1 = 0, l2 = 0;
 	char *s;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
 	while (*(s1 + idx) != '\0')
 		idx++;
 	while (*(s2 + idy) != '\0')
