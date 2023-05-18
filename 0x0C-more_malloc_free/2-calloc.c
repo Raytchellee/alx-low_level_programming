@@ -10,7 +10,7 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int idx;
+	unsigned int idx, len;
 	void *s;
 	char *t;
 
