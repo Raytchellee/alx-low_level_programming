@@ -24,10 +24,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	len = nmemb * size;
 	t = s;
 
-	while (--len)
-	{
+	do {
 		*t++ = 0;
-	}
+	} while (--len);
 
 	return (s);
 }
