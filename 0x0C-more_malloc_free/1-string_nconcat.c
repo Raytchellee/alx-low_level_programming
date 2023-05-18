@@ -31,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		l1++;
 		len++;
 	}
-	while (*(s2 + l2) != '\0' && l2 < n)
+	while (*(s2 + l2) != '\0' && l2 < idy)
 	{
 		*(s + len) = *(s2 + l2);
 		l2++;
