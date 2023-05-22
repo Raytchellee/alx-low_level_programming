@@ -34,13 +34,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(d);
 		return (NULL);
 	}
-	while (idz < idx)
+	while (idz < idx - 1)
 	{
 		d->name[idz] = name[idz];
 		idz++;
 	}
 	d->name[idz] = '\0';
-	while (ida < idy)
+	while (ida < idy - 1)
 	{
 		d->owner[ida] = owner[ida];
 		ida++;
