@@ -11,7 +11,7 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int idx;
-	char currentString;
+	char *currentString;
 	va_list currentIndex;
 
 	va_start(currentIndex, n);
