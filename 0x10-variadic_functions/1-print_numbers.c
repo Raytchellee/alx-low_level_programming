@@ -4,6 +4,7 @@
 /**
  * print_numbers - prints numbers
  * @n: number of inputs
+ * @separator: input separator fot the digits
  * Return: none
  */
 
@@ -11,11 +12,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int idx;
 	va_list currentIndex;
-
-	if (n == 0)
-	{
-		return;
-	}
 
 	va_start(currentIndex, n);
 
@@ -26,7 +22,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			continue;
 		}
-		printf("%s ", separator);
+		if (separator)
+			printf("%s ", separator);
 	}
 	printf("\n");
 	va_end(currentIndex);
