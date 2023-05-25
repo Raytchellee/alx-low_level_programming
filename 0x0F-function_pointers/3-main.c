@@ -1,4 +1,6 @@
 #include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - calculates two integers
@@ -25,7 +27,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if ((argv[2] == '/' || argv[2] == '%') && argv[3] == '0')
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && atoi(argv[3]) == 0)
 	{
 		printf("Error\n");
 		exit(100);

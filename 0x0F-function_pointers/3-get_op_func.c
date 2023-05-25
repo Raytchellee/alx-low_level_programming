@@ -17,7 +17,7 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int idx;
 
-	for (idx == 0; idx <= 4; idx++)
+	for (idx = 0; idx <= 4; idx++)
 	{
 		if (*ops[idx].op == s[0])
 			return (ops[idx].f);
