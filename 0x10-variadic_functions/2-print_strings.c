@@ -11,14 +11,16 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int idx;
+	char currentString;
 	va_list currentIndex;
 
 	va_start(currentIndex, n);
 
 	for (idx = 0; idx < n; idx++)
 	{
-		if (va_arg(currentIndex, char *))
-			printf("%s", va_arg(currentIndex, char *));
+		currentString = va_arg(currentIndex, char *);
+		if (currentString)
+			printf("%s", currentString);
 		else
 			printf("(nil)");
 
