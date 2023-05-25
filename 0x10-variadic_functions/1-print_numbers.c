@@ -9,7 +9,6 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	int total = 0;
 	unsigned int idx;
 	va_list currentIndex;
 
@@ -29,6 +28,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		}
 		printf("%s ", separator);
 	}
-	prinf("\n")
+	printf("\n");
 	va_end(currentIndex);
 }
