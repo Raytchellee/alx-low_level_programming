@@ -24,7 +24,7 @@ void print_all(const char * const format, ...)
 			{
 				printf(", ");
 				break;
-			}, idy++;
+			} idy++;
 		}
 		switch (format[idx])
 		{
@@ -46,7 +46,7 @@ void print_all(const char * const format, ...)
 		case 'f':
 			printf("%f", va_arg(currentIndex, double)), notFirstValue++;
 			break;
-		}, idx++;
+		} idx++;
 	}
 	printf("\n"), va_end(currentIndex);
 }
