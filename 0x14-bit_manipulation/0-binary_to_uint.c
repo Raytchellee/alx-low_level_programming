@@ -9,7 +9,7 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int dec = 0;
 	int idx = 0, multiplier;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
 	
 	while (b[idx] != '\0')
@@ -18,9 +18,8 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		idx++;
 	}
-	idx--;
 
-	for (idx, multiplier = 1; idx > -1; idx--, multiplier *= 2)
+	for (idx--, multiplier = 1; idx > -1; idx--, multiplier *= 2)
 	{
 		if (b[idx] == '1')
 		{
