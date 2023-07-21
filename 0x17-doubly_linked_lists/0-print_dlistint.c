@@ -3,7 +3,7 @@
 /**
  * print_dlistint - prints node values
  * @h: list head
- * Return : number of nodes
+ * Return: number of nodes
  */
 
 size_t print_dlistint(const dlistint_t *h)
