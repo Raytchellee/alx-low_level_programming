@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - deletes node at indes
- * @h: list head
- * @idx: index
+ * delete_dnodeint_at_index - deletes node at indes
+ * @head: list head
+ * @index: index
  * Return: new list
  */
 
@@ -16,11 +16,13 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (-1);
 	while (temp->prev != NULL)
 		temp = temp->prev;
-	for (idx = 0; temp != NULL && idx < index; idx++)
+	while (temp != NULL && idx < index){
 		temp = temp->next;
+		idx++;
+	}
 	if (idx < index)
 		return (-1);
-	if (temp->next != NULL && idx == 0)
+	if (idx == 0 && temp->next != NULL )
 	{
 		node = temp;
 		temp = temp->next;
