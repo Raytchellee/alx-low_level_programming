@@ -43,7 +43,4 @@ def getPerimeter(idx, idy, grid):
         if idy + 1 >= limity:
             count += 1
 
-    if count == 4:
-        return 0
-    else:
-        return count
+    return count
