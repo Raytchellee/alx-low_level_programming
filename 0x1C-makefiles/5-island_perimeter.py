@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""A module that gets perimeter of island"""
+
+
 def island_perimeter(grid):
+    """Main function to return perimeter of island"""
     perimeter = 0
 
     for idx in range(0, len(grid)):
@@ -11,6 +15,7 @@ def island_perimeter(grid):
 
 
 def getPerimeter(idx, idy, grid):
+    """A helper function function to identify islands"""
     count = 0
     limitx = len(grid)
     limity = len(grid[idx])
