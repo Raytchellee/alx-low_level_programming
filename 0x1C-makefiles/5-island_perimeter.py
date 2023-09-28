@@ -23,24 +23,21 @@ def getPerimeter(idx, idy, grid):
     if idx - 1 >= 0:
         if (grid[idx - 1][idy] == 0):
             count += 1
+    else:
+        count += 1
     if idx + 1 < limitx:
         if (grid[idx + 1][idy] == 0):
             count += 1
+    else:
+        count += 1
     if idy - 1 >= 0:
         if (grid[idx][idy - 1] == 0):
             count += 1
+    else:
+        count += 1
     if idy + 1 < limity:
         if (grid[idx][idy + 1] == 0):
             count += 1
-
-    if count != 0 and count != 4:
-        if idx - 1 < 0:
-            count += 1
-        if idx + 1 >= limitx:
-            count += 1
-        if idy - 1 < 0:
-            count += 1
-        if idy + 1 >= limity:
-            count += 1
-
+    else:
+        count += 1
     return count
