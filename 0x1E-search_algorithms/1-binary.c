@@ -28,11 +28,11 @@ int helper(int *array, size_t left, size_t right, int value)
 	}
 
 	if (value == array[mid])
-		return mid;
+		return (mid);
 	else if (value < array[mid])
-		return helper(array, left, mid - 1, value);
+		return (helper(array, left, mid - 1, value));
 	else
-		return helper(array, mid + 1, right, value);
+		return (helper(array, mid + 1, right, value));
 }
 
 /**
@@ -47,5 +47,5 @@ int binary_search(int *array, size_t size, int value)
 {
 	if (!array)
 		return (-1);
-	return helper(array, 0, size - 1, value);
+	return (helper(array, 0, size - 1, value));
 }
