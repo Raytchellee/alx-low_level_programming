@@ -14,7 +14,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	listint_t *temp;
 	size_t idx = 0, idy = 0, idz;
 
-	if (list == NULL || size == 0)
+	if (!list || size == 0)
 		return (NULL);
 
 	idz = (size_t)sqrt((double)size);
