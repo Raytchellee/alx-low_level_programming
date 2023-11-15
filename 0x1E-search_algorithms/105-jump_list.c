@@ -1,5 +1,5 @@
-#include <math.h>
 #include <stdio.h>
+#include <math.h>
 
 /**
  * jump_list - jump search array
@@ -11,33 +11,39 @@
 
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	listint_t *temp;
-	size_t idx = 0, idy = 0, idz;
+	listint_t *curr;
+	size_t idx, k, m;
 
 	if (!list || size == 0)
 		return (NULL);
 
-	idz = (size_t)sqrt((double)size);
+	m = (size_t)sqrt((double)size);
+	idx = 0;
+	k = 0;
+
 	do {
-		temp = list;
-		idy++;
-		idx = idy * idz;
+		curr = list;
+		k++;
+		idx = k * m;
 
 		while (list->next && list->index < idx)
 			list = list->next;
+
 		if (list->next == NULL && idx != list->index)
 			idx = list->index;
+
 		printf("Value checked at index [%d] = [%d]\n", (int)idx, list->n);
 
 	} while (idx < size && list->next && list->n < value);
 
 	printf("Value found between indexes ");
-	printf("[%d] and [%d]\n", (int)temp->index, (int)list->index);
-	for (; temp && temp->index <= list->index; temp = temp->next)
+	printf("[%d] and [%d]\n", (int)curr->index, (int)list->index);
+
+	for (; curr && curr->index <= list->index; curr = curr->next)
 	{
-		printf("Value checked at index [%d] = [%d]\n", (int)temp->index, temp->n);
-		if (temp->n == value)
-			return (temp);
+		printf("Value checked at index [%d] = [%d]\n", (int)curr->index, curr->n);
+		if (curr->n == value)
+			return (curr);
 	}
 
 	return (NULL);
