@@ -1,8 +1,8 @@
 #ifndef SEARCH_ALGO_H
 #define SEARCH_ALGO_H
 
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * struct listint_s - singly linked list
@@ -48,6 +48,5 @@ int exponential_search(int *array, size_t size, int value);
 int advanced_binary(int *array, size_t size, int value);
 listint_t *jump_list(listint_t *list, size_t size, int value);
 skiplist_t *linear_skip(skiplist_t *list, int value);
-
 
 #endif /* algorithms */
