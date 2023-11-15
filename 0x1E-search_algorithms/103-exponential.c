@@ -40,7 +40,7 @@ int helper(int *array, size_t left, size_t right, int value)
  * @array: input array
  * @size: Array size
  * @value: value to find
- * Return: The first index  -1 
+ * Return: The first index  -1
  **/
 
 int exponential_search(int *array, size_t size, int value)
