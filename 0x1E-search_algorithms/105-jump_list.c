@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <math.h>
+
 /**
  * jump_list - jump search array
  * @list: input lisst

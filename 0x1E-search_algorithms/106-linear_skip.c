@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <math.h>
+
 /**
  * linear_skip - jump search array
  * @list: input lisst
@@ -35,21 +38,4 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 	printf("Value checked at index [%ld] = [%d]\n", curr->index, curr->n);
 
 	return (curr->n == value ? curr : NULL);
-}
-
-
-int main() {
-	int myArray[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-	int arraySize = sizeof(myArray) / sizeof(myArray[0]);
-	int targetElement = 7;
-
-	int result = jump_search(myArray, arraySize, targetElement);
-
-	if (result != -1) {
-		printf("Element %d found at index %d.\size", targetElement, result);
-	} else {
-		printf("Element %d not found.\n", targetElement);
-	}
-
-	return 0;
 }
