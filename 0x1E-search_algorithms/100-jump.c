@@ -11,7 +11,7 @@
 
 int jump_search(int *array, size_t size, int value)
 {
-	size_t jump = sqrt(size), prev = 0, curr = jump;
+	size_t jump = sqrt(size), prev = 0, curr = jump, idx;
 
 	while (curr < size && array[curr] < value)
 	{
@@ -19,7 +19,7 @@ int jump_search(int *array, size_t size, int value)
 		curr += jump;
 	}
 
-	for (size_t idx = prev; idx < fmin(curr, size); idx++)
+	for (idx = prev; idx < fmin(curr, size); idx++)
 	{
 		if (array[idx] == value)
 			return (idx);
